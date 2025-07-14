@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="320da920837222107e61e480ceaad3ec" extends="sys_user" label="Donors" max_length="40" name="x_1798559_donation_donors" type="collection"/>
+</database>
