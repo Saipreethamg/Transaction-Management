@@ -1,3 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="320da920837222107e61e480ceaad3ec" extends="sys_user" label="Donors" max_length="40" name="x_1798559_donation_donors" type="collection"/>
+    <element audit="true" db_object_id="320da920837222107e61e480ceaad3ec" extends="sys_user" label="Donors" max_length="40" name="x_1798559_donation_donors" type="collection">
+        <element attributes="encode_utf8=false" label="Reference" mandatory="true" max_length="32" name="u_reference_2" reference="x_1798559_donation_donation_transactions" type="reference"/>
+        <element label="Address" mandatory="true" max_length="100" name="address" type="string"/>
+        <element label="Donor Id" max_length="40" name="donor_id" read_only="true" type="integer"/>
+        <element label="Amount you would like to donate" max_length="20" name="amount_you_would_like_to_donate" type="currency"/>
+        <element attributes="choice_script=radio" choice="1" label="Would you like to make this a one-time or recurring donation?" max_length="40" name="would_you_like_to_make_this_a_one_time_or_recurring_donation" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Recurring" value="recurring"/>
+                <element inactive_on_update="false" label="One-time" value="one-time"/>
+            </choice>
+        </element>
+        <index name="index">
+            <element name="u_reference_2"/>
+        </index>
+    </element>
 </database>

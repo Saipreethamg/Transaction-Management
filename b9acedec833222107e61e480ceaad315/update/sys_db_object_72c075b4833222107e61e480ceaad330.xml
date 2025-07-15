@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
     <sys_db_object action="INSERT_OR_UPDATE">
         <access>public</access>
-        <actions_access>true</actions_access>
-        <alter_access>true</alter_access>
+        <actions_access>false</actions_access>
+        <alter_access>false</alter_access>
         <caller_access/>
-        <client_scripts_access>true</client_scripts_access>
+        <client_scripts_access>false</client_scripts_access>
         <configuration_access>false</configuration_access>
-        <create_access>true</create_access>
-        <create_access_controls>false</create_access_controls>
+        <create_access>false</create_access>
+        <create_access_controls>true</create_access_controls>
         <delete_access>false</delete_access>
         <is_extendable>true</is_extendable>
-        <label>Donors</label>
+        <label>Donation Transactions</label>
         <live_feed_enabled>false</live_feed_enabled>
-        <name>x_1798559_donation_donors</name>
+        <name>x_1798559_donation_donation_transactions</name>
         <number_ref/>
         <provider_class/>
         <read_access>true</read_access>
         <scriptable_table>false</scriptable_table>
-        <super_class display_value="User" name="sys_user">3ef4e8335d3122104f34969735a7ad8d</super_class>
+        <super_class display_value="Donors" name="x_1798559_donation_donors">320da920837222107e61e480ceaad3ec</super_class>
         <sys_class_name>sys_db_object</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-07-14 10:56:02</sys_created_on>
-        <sys_id>320da920837222107e61e480ceaad3ec</sys_id>
+        <sys_created_on>2025-07-15 05:51:47</sys_created_on>
+        <sys_id>72c075b4833222107e61e480ceaad330</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_name>Donors</sys_name>
+        <sys_name>Donation Transactions</sys_name>
         <sys_package display_value="Donation Management" source="x_1798559_donation">b9acedec833222107e61e480ceaad315</sys_package>
         <sys_policy/>
         <sys_scope display_value="Donation Management">b9acedec833222107e61e480ceaad315</sys_scope>
-        <sys_update_name>sys_db_object_320da920837222107e61e480ceaad3ec</sys_update_name>
+        <sys_update_name>sys_db_object_72c075b4833222107e61e480ceaad330</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-07-14 15:28:54</sys_updated_on>
-        <update_access>true</update_access>
-        <user_role/>
+        <sys_updated_on>2025-07-15 06:32:31</sys_updated_on>
+        <update_access>false</update_access>
+        <user_role display_value="x_1798559_donation.donation_transactions_user" name="x_1798559_donation.donation_transactions_user">08aba2a8837622107e61e480ceaad36f</user_role>
         <ws_access>true</ws_access>
     </sys_db_object>
 </record_update>

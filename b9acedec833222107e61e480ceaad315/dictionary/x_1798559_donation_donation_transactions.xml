@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="72c075b4833222107e61e480ceaad330" extends="x_1798559_donation_donors" label="Donation Transactions" max_length="40" name="x_1798559_donation_donation_transactions" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" dependent="bank_name" dependent_on_field="bank_name" label="Bank Branch Name" max_length="40" name="u_choice_1" type="string" use_dependent_field="true">
+            <choice/>
+        </element>
+        <element label="Reference" max_length="32" name="reference" reference="x_1798559_donation_donors" type="reference"/>
+        <element label="Amount" max_length="20" name="amount" type="currency"/>
+        <element label="Payee" max_length="100" name="payee" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Short Description" max_length="40" name="short_description" type="string"/>
+        <element choice="3" default="hdfc" label="Bank Name" max_length="40" name="bank_name" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="ICICi" sequence="1" value="icici"/>
+                <element inactive_on_update="false" label="SBI" sequence="2" value="sbi"/>
+                <element inactive_on_update="false" label="HDFC" sequence="0" value="hdfc"/>
+            </choice>
+        </element>
+        <element choice="1" label="Account" max_length="40" name="account" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Current" value="Current"/>
+                <element inactive_on_update="false" label="Savings" value="Savings"/>
+            </choice>
+        </element>
+        <element attributes="omit_sys_original=true" label="Amount Donated" max_length="20" name="u_currency_1" type="currency"/>
+        <element label="Memo" max_length="40" name="memo" type="string"/>
+        <element label="Description" max_length="4000" name="description" type="string"/>
+        <element choice="3" default="Withdrawl" label="Transaction" max_length="40" name="transaction" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Withdrawl" sequence="2" value="Withdrawl"/>
+                <element inactive_on_update="false" label="UPI" sequence="1" value="UPI"/>
+                <element inactive_on_update="false" label="Net Banking" sequence="0" value="Net Banking"/>
+            </choice>
+        </element>
+        <element label="Transaction ID" max_length="40" name="transaction_id" read_only="true" type="integer"/>
+        <element label="Check Number" max_length="40" name="check_number" type="integer"/>
+        <element choice="1" label="Category" max_length="40" name="category" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Recurring" value="Recurring"/>
+                <element inactive_on_update="false" label="One-time" value="One-time"/>
+            </choice>
+        </element>
+        <element label="Date" max_length="40" name="date" type="glide_date"/>
+        <index name="index">
+            <element name="reference"/>
+        </index>
+    </element>
+</database>
